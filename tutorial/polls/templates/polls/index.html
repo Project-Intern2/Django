@@ -1,0 +1,32 @@
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#{% if latest_question_list %}#}
+{#    <ul>#}
+{#        {% for question in  latest_question_list %}#}
+{#            <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% else %}#}
+{#    <p>No polls are valiable.</p>#}
+{#{% endif %}#}
+{% extends 'polls/base.html' %}
+{% block content %}
+<p>Hello xin chào <b>{{ name }}</b></p>
+<p>Game</p>
+<ul>
+    {% for item in game %}
+        {% if item != 'lmht' %}
+            <li>{{ item }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+{#</body>#}
+{#</html>#}
